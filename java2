@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        char[] t = {'а', '1', 'b', '2', 'с', '3'};
+
+        ArrayList<Character> l = new ArrayList<>();
+        ArrayList<Character> n = new ArrayList<>();
+
+        for (char ch : t) {
+            if (Character.isLetter(ch))
+                l.add(ch);
+            else if (Character.isDigit(ch))
+                n.add(ch);
+        }
+
+        t = null;
+
+        System.out.println(l);
+        System.out.println(n);
+    }
+}
