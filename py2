@@ -1,0 +1,6 @@
+r = ['а', '1', 'b', '2', 'с', '3']
+l = [item for item in data if item.isalpha()]
+n = [item for item in data if item.isdigit()]
+del data
+print(l)
+print(n)
