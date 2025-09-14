@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cctype>
+
+int main() {
+    std::vector<std::string> a = {"а","1","b","2","с","3"};
+    std::vector<std::string> l, n;
+
+    for (const auto &s : a) {
+        if (!s.empty() && std::isdigit(static_cast<unsigned char>(s[0])))
+            n.push_back(s);
+        else
+            l.push_back(s);
+    }
+
+    a.clear(); 
+
+    for (const auto &x : l) std::cout << x << ' ';
+    std::cout << '\n';
+    for (const auto &x : n) std::cout << x << ' ';
+    std::cout << '\n';
+
+    return 0;
+}
